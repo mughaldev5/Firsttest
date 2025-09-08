@@ -1,0 +1,41 @@
+{
+  "homeLinks": [
+    { "to": "/homestyle01", "label": "Home Style 01" },
+    { "to": "/homestyle02", "label": "Home Style 02" },
+    { "to": "/homestyle03", "label": "Home Style 03" },
+    { "to": "/homestyle04", "label": "Home Style 04" },
+    { "to": "/homestyle05", "label": "Home Style 05" },
+    { "to": "/homestyle06", "label": "Home Style 06" },
+    { "to": "/homestyle07", "label": "Home Style 07" },
+    { "to": "/homestyle08", "label": "Home Style 08" },
+    { "to": "/homestyle09", "label": "Home Style 09" }
+  ],
+  "aboutLinks": [
+    { "to": "/about", "label": "About" },
+    { "to": "/service", "label": "Service" },
+    { "to": "/servicedetail", "label": "Service Details" },
+    { "to": "/portfolio", "label": "Portfolio" },
+    { "to": "/portfolio02", "label": "Portfolio-02" },
+    { "to": "/portfoliodetails", "label": "Portfolio Details" },
+    { "to": "/team", "label": "Team" },
+    { "to": "/teamdetails", "label": "Team Details" },
+    { "to": "/fqa", "label": "FQA" },
+    { "to": "/googlelocation", "label": "Google Map Location" }
+  ],
+  "propertyLinks": [
+    { "to": "/propertygrid", "label": "About" },
+    { "to": "/propertylist", "label": "Property List" },
+    { "to": "/propertysidebar", "label": "Property No Sidebar" },
+    { "to": "/propertyleft", "label": "Property Left Sidebar" },
+    { "to": "/propertyright", "label": "Property Right Sidebar" },
+    { "to": "/propertydetails", "label": "Property Details" },
+    { "to": "/otherpages", "label": "Other Pages" }
+  ],
+  "newsLinks": [
+    { "to": "/news", "label": "News" },
+    { "to": "/newsgrid", "label": "News Grid" },
+    { "to": "/newssidebar", "label": "News Left Sidebar" },
+    { "to": "/newsright", "label": "News Right Sidebar" },
+    { "to": "/newsdetails", "label": "News Details" }
+  ]
+}

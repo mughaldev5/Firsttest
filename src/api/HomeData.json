@@ -1,0 +1,359 @@
+{
+  "home": [
+    {
+      "id": "0",
+      "title": "Real Estate Agency",
+      "dream": "Find Your Draem House By Us",
+      "para": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.",
+      "img_url": "http://localhost:5173/image/logo8.png"
+    }
+  ],
+
+  "about": [
+    {
+      "id": "1",
+      "img_url": " /image/ab.jpg",
+      "title": "The Leading Real Estate Rental Marketplace",
+      "para": "Over 39,000 people work for us in more than 70 countries all over the This breadth of global coverage, combined with specialist services",
+      "design": "Smart Home design",
+      "sence": "Beautiful sence Around",
+      "style": "Exceptional Lifestyle",
+      "security": "complete 24/7 Security",
+      "para1": "Enimad minim veniam quis nostrud exercitation llamco laboris. Lorem ipsum dolor sit amet"
+    }
+  ],
+
+  "homeabout": [
+    {
+      "id": "2",
+      "title": "Tody Sells properties",
+      "para": "Houzez allow you to design unlimited panels and real estate custom forms to capture leads and keep record of all formation",
+      "live": "Live Music Cocerts at Luviana",
+      "boat": "Our SecretIsland Boat Tour is Just for You",
+      "stylemusic": "Live Music Cocerts at Luviana",
+      "music": "Live Music Cocerts at Luviana",
+      "rom": "Bedrooms",
+      "rom1": "Bedrooms",
+      "parking": "Car parking",
+      "square": "square Ft",
+      "img_url": " /image/9.jpg",
+      "img_url1": " /image/lo8.jpg",
+      "img_url2": " /image/lo9.jpg",
+      "img_url3": " /image/lo10.jpg",
+      "img_url4": " /image/lo5.jpg",
+      "img_url5": " /image/lo11.jpg"
+    }
+  ],
+
+  "service": [
+    {
+      "id": "0",
+      "img_url": " /image/logo4.png",
+      "demand": "Buy a home",
+      "para": "over 1 million+ homes for sale available on the website, we can match you with a house you will want to call home.",
+      "ready": "Find a home"
+    },
+    {
+      "id": "1",
+      "img_url": " /image/logo3.png",
+      "demand": "Rent a home",
+      "para": "over 1 million+ homes for sale available on the website, we can match you with a house you will want to call home.",
+      "ready": "Find a home"
+    },
+    {
+      "id": "2",
+      "img_url": " /image/logo2.png",
+      "demand": "Sell a home",
+      "para": "over 1 million+ homes for sale available on the website, we can match you with a house you will want to call home.",
+      "ready": "Find a home"
+    }
+  ],
+  
+  "homerent":[
+    {
+     "id": "0",
+     "img_url": " /image/1.jpg",
+     "req":"FOR RENT", 
+     "location":"Belmonts Gardens,Chicago",
+     "locationicon":"IoLocation",
+     "cameraicon":"IoCameraSharp",
+     "videoicon":"MdLocalMovies",
+     "price":"$34,900",
+     "title": "New Apartment Nice View",
+     "para": "Beautiful Huge 1 Family House In Heart Of Westbury. Newly Renovated With New Wood", 
+       "rom": "Bedrooms",
+      "roomicon": "MdBed",
+      "rom1": "Bedrooms",
+      "rom1icon": "FaBath",
+      "square": "square Ft",
+      "squareicon": "BsTextarea",
+      "img_url1": " /image/t.jpg",
+      "name":"Taswar Ali",
+      "profetion":"Estate Agent",
+      "icon1":"BsArrowsAngleContract",
+      "icon2":"IoHeartOutline",
+      "icon3":"IoIosAddCircleOutline"
+      
+    },
+    {
+     "id": "1",
+     "img_url": " /image/2.jpg",
+     "req":"FOR RENT", 
+     "location":"Belmonts Gardens,Chicago",
+     "locationicon":"IoLocation",
+     "cameraicon":"IoCameraSharp",
+     "videoicon":"MdLocalMovies",
+     "price":"$34,900",
+     "title": "Modern Apartments",
+     "para": "Beautiful Huge 1 Family House In Heart Of Westbury. Newly Renovated With New Wood", 
+       "rom": "Bedrooms",
+      "roomicon": "MdBed",
+      "rom1": "Bedrooms",
+      "rom1icon": "FaBath",
+      "square": "square Ft",
+      "squareicon": "BsTextarea",
+      "img_url1": " /image/t.jpg",
+      "name":"Taswar Ali",
+      "profetion":"Estate Agent",
+      "icon1":"BsArrowsAngleContract",
+      "icon2":"IoHeartOutline",
+      "icon3":"IoIosAddCircleOutline"
+      
+    },
+    {
+     "id": "2",
+     "img_url": " /image/3.jpg",
+     "req":"FOR RENT", 
+     "location":"Belmonts Gardens,Chicago",
+     "locationicon":"IoLocation",
+     "cameraicon":"IoCameraSharp",
+     "videoicon":"MdLocalMovies",
+     "price":"$34,900",
+     "title": "Comfortable Apartment",
+     "para": "Beautiful Huge 1 Family House In Heart Of Westbury. Newly Renovated With New Wood", 
+       "rom": "Bedrooms",
+      "roomicon": "MdBed",
+      "rom1": "Bedrooms",
+      "rom1icon": "FaBath",
+      "square": "square Ft",
+      "squareicon": "BsTextarea",
+      "img_url1": " /image/t.jpg",
+      "name":"Taswar Ali",
+      "profetion":"Estate Agent",
+      "icon1":"BsArrowsAngleContract",
+      "icon2":"IoHeartOutline",
+      "icon3":"IoIosAddCircleOutline"
+      
+    },
+    {
+     "id": "3",
+     "img_url": " /image/4.jpg",
+     "req":"FOR RENT", 
+     "location":"Belmonts Gardens,Chicago",
+     "locationicon":"IoLocation",
+     "cameraicon":"IoCameraSharp",
+     "videoicon":"MdLocalMovies",
+     "price":"$34,900",
+     "title": "Luxury villa in Rago Park ",
+     "para": "Beautiful Huge 1 Family House In Heart Of Westbury. Newly Renovated With New Wood", 
+       "rom": "Bedrooms",
+      "roomicon": "MdBed",
+      "rom1": "Bedrooms",
+      "rom1icon": "FaBath",
+      "square": "square Ft",
+      "squareicon": "BsTextarea",
+      "img_url1": " /image/t.jpg",
+      "name":"Taswar Ali",
+      "profetion":"Estate Agent",
+      "icon1":"BsArrowsAngleContract",
+      "icon2":"IoHeartOutline",
+      "icon3":"IoIosAddCircleOutline"
+      
+    },
+    {
+     "id": "4",
+     "img_url": " /image/5.jpg",
+     "req":"FOR RENT", 
+     "location":"Belmonts Gardens,Chicago",
+     "locationicon":"IoLocation",
+     "cameraicon":"IoCameraSharp",
+     "videoicon":"MdLocalMovies",
+     "price":"$34,900",
+     "title": "Beautiful Flat in Manhattan",
+     "para": "Beautiful Huge 1 Family House In Heart Of Westbury. Newly Renovated With New Wood", 
+       "rom": "Bedrooms",
+      "roomicon": "MdBed",
+      "rom1": "Bedrooms",
+      "rom1icon": "FaBath",
+      "square": "square Ft",
+      "squareicon": "BsTextarea",
+      "img_url1": " /image/t.jpg",
+      "name":"Taswar Ali",
+      "profetion":"Estate Agent",
+      "icon1":"BsArrowsAngleContract",
+      "icon2":"IoHeartOutline",
+      "icon3":"IoIosAddCircleOutline"
+      
+   }
+  ],
+
+ "housestudtio": [
+  {
+    "title":"The Stutio"
+  },
+  {
+    "para":"Enimad minim veniam quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet cons aetetur adipisicing elit sedo eiusmod tempor.Incididunt labore et dolore magna aliqua. sed ayd minim veniam."
+  },
+  { 
+    "label": "Total Area",
+   "value": "2800 Sq. Ft"
+  }, 
+  {
+      "label": "Bedroom", 
+     "value": "150 Sq. Ft"
+  }, 
+  {
+      "label": "Bathroom",
+      "value": "45 Sq. Ft"
+  }, 
+  {
+    "label": "Belcony/Pets",
+    "value": "Allowed"
+  }, 
+  { 
+    "label": "Lounge", 
+   "value": "650 Sq. Ft" 
+  },
+  { 
+    "img_url":" /image/logo1.png"
+  }  
+ ],
+
+  "homedeluxe":[
+ {
+    "title":"Deluxe portion"
+  },
+  {
+    "para":"Enimad minim veniam quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet cons aetetur adipisicing elit sedo eiusmod tempor.Incididunt labore et dolore magna aliqua. sed ayd minim veniam."
+  },
+  { 
+    "label": "Total Area",
+   "value": "2800 Sq. Ft"
+  }, 
+  {
+      "label": "Bedroom", 
+     "value": "150 Sq. Ft"
+  }, 
+  {
+      "label": "Bathroom",
+      "value": "45 Sq. Ft"
+  }, 
+  {
+    "label": "Belcony/Pets",
+    "value": "Allowed"
+  }, 
+  { 
+    "label": "Lounge", 
+   "value": "650 Sq. Ft" 
+  },
+  { 
+    "img_url":" /image/logo1.png"
+  }
+  ],
+
+  "homepenthouse":[
+  {
+    "title":"Penthouse"
+  },
+  {
+    "para":"Enimad minim veniam quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet cons aetetur adipisicing elit sedo eiusmod tempor.Incididunt labore et dolore magna aliqua. sed ayd minim veniam."
+  },
+  { 
+    "label": "Total Area",
+   "value": "2800 Sq. Ft"
+  }, 
+  {
+      "label": "Bedroom", 
+     "value": "150 Sq. Ft"
+  }, 
+  {
+      "label": "Bathroom",
+      "value": "45 Sq. Ft"
+  }, 
+  {
+    "label": "Belcony/Pets",
+    "value": "Allowed"
+  }, 
+  { 
+    "label": "Lounge", 
+   "value": "650 Sq. Ft" 
+  },
+  { 
+    "img_url":" /image/logo1.png"
+  }
+  ],
+
+  "homegarden":[
+  {
+    "title":"Top Garden"
+  },
+  {
+    "para":"Enimad minim veniam quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet cons aetetur adipisicing elit sedo eiusmod tempor.Incididunt labore et dolore magna aliqua. sed ayd minim veniam."
+  },
+  { 
+    "label": "Total Area",
+   "value": "2800 Sq. Ft"
+  }, 
+  {
+      "label": "Bedroom", 
+     "value": "150 Sq. Ft"
+  }, 
+  {
+      "label": "Bathroom",
+      "value": "45 Sq. Ft"
+  }, 
+  {
+    "label": "Belcony/Pets",
+    "value": "Allowed"
+  }, 
+  { 
+    "label": "Lounge", 
+   "value": "650 Sq. Ft" 
+  },
+  { 
+    "img_url":" /image/logo1.png"
+  }
+  ],
+
+  "Homeheight":[
+  {
+    "title":"Double Height"
+  },
+  {
+    "para":"Enimad minim veniam quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet cons aetetur adipisicing elit sedo eiusmod tempor.Incididunt labore et dolore magna aliqua. sed ayd minim veniam."
+  },
+  { 
+    "label": "Total Area",
+   "value": "2800 Sq. Ft"
+  }, 
+  {
+      "label": "Bedroom", 
+     "value": "150 Sq. Ft"
+  }, 
+  {
+      "label": "Bathroom",
+      "value": "45 Sq. Ft"
+  }, 
+  {
+    "label": "Belcony/Pets",
+    "value": "Allowed"
+  }, 
+  { 
+    "label": "Lounge", 
+   "value": "650 Sq. Ft" 
+  },
+  { 
+    "img_url":" /image/logo1.png"
+  }
+  ]
+}
