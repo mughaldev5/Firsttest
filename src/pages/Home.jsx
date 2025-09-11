@@ -56,7 +56,7 @@ const Home = () => {
                         }
                     </div>
                 </div>
-                <PropertyRentMap/>
+                <PropertyRentMap active={active} setActive={setActive}/>
                 <Homepage/>
             </Layout>
         </div>

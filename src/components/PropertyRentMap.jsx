@@ -1,74 +1,68 @@
-import React, { useState, useEffect} from 'react'
-import HomeData from '../api/HomeData.json'
-import PropertyRentCard from './PropertyRentCard'
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import { data } from 'react-router';
-const PropertyRentMap = () => {
+import React from "react";
+import Slider from "react-slick";
+import HomeData from "../api/HomeData.json";
+import PropertyRentCard from "./PropertyRentCard";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
- const [currentIndex, setCurrentIndex] = useState(0);
-  const visibleCards = 3;
-  const totalCards = HomeData.homerent.length;
+// Custom Arrows
+function NextArrow(props) {
+  const { className, onClick } = props;
+  return (
+    <div
+      className={`${className} opacity-0 group-hover:opacity-100 transition-opacity duration-300 !flex !items-center !justify-center !bg-orange-600 !rounded-full !w-10 !h-10 !z-20 !right-2`}
+      onClick={onClick}
+    >
+      
+    </div>
+  );
+}
 
-  const nextSlide = () => {
-    
-      setCurrentIndex(currentIndex === totalCards-1 ? 0 : currentIndex + 1);
-      };
+function PrevArrow(props) {
+  const { className, onClick } = props;
+  return (
+    <div
+      className={`${className} opacity-0 group-hover:opacity-100 transition-opacity duration-300 !flex !items-center !justify-center !bg-orange-600 !rounded-full !w-10 !h-10 !z-20 !left-2`}
+      onClick={onClick}
+    >
+      
+    </div>
+  );
+}
 
-  const prevSlide = () => {
-     
-      setCurrentIndex(currentIndex === 0 ? totalCards-1 : currentIndex - 1);
-    
+const PropertyRentMap = ({ active, setActive }) => {
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3, // ek row me 3 cards
+    slidesToScroll: 1,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
   };
 
   return (
-    
-      <div className='relative flex  justify-center h-11/12 w-full bg-white overflow-hidden'>
-      <div className='absolute flex flex-col items-center justify-center mt-28  overflow-hidden'>
-         <div className='flex justify-center items-center bg-orange-100 h-8 w-32 overflow-hidden rounded-2xl'>
-         <h1 className='text-orange-600 items-center'>Properties</h1>
-         </div>
-         <div className='mt-8 overflow-hidden'>
-       <h1 className='text-5xl font-bold text-gray-800 overflow-hidden'>
-        Featured Listings
-         </h1>
-         </div>
-     </div>
-     <div className="relative w-full overflow-hidden">
-      {/* Left Arrow */}
-      <button
-        onClick={prevSlide}
-        className="absolute left-2 top-3/4 -translate-y-1/2 z-10 p-3 bg-white shadow-lg rounded-full hover:bg-orange-600 hover:text-white"
-      >
-        <FaArrowLeft />
-      </button>
-
-      {/* Slider Track */}
-      <div className="flex transition-transform duration-500 "
-        style={{
-            transform: `translateX(-${currentIndex * (100 / visibleCards)}%)`,
-          }}
-       
-      >
-        {HomeData.homerent.map((curElem) => (
-            
-          <div key={curElem.id}  className='flex items-center justify-center flex-shrink-0 w-1/3 mt-75 overflow-hidden '>
-         <PropertyRentCard  data={curElem} />
-         </div>
-         
-        ))}
+    <div className="w-full bg-white py-16 group relative">
+      {/* Heading Section */}
+      <div className="text-center mb-12">
+        <div className="mx-auto bg-orange-100 h-8 w-32 rounded-2xl flex items-center justify-center">
+          <h1 className="text-orange-600">Properties</h1>
+        </div>
+        <h1 className="mt-8 text-5xl font-bold text-gray-800">
+          Featured Listings
+        </h1>
       </div>
 
-      {/* Right Arrow */}
-      <button
-        onClick={nextSlide}
-        className="absolute right-2 top-3/4 -translate-y-1/2 z-10 p-3 bg-white shadow-lg rounded-full hover:bg-orange-600 hover:text-white"
-      >
-        <FaArrowRight />
-      </button>
+      {/* Slider Section */}
+      <Slider {...settings}>
+        {HomeData.homerent.map((curElem) => (
+          <div key={curElem.id} className="!flex !justify-center">
+            <PropertyRentCard data={curElem} active={active} setActive={setActive}/>
+          </div>
+        ))}
+      </Slider>
     </div>
-     </div>
-    
-  )
-}
+  );
+};
 
-export default PropertyRentMap
+export default PropertyRentMap;

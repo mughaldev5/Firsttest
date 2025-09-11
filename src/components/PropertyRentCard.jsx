@@ -8,6 +8,7 @@ import { MdLocalMovies } from "react-icons/md";
 import { BsArrowsAngleContract } from "react-icons/bs";
 import { IoHeartOutline } from "react-icons/io5";
 import { IoIosAddCircleOutline } from "react-icons/io";
+
 const iconMap = {
   MdBed,
   FaBath,
@@ -19,9 +20,9 @@ const iconMap = {
   IoIosAddCircleOutline,
   BsTextarea,
 };
-const PropertyRentCard = ({ data }) => {
+const PropertyRentCard = ({ data, active, setActive }) => {
   const { id, img_url, req, location, locationicon, cameraicon, videoicon, price, title, para, rom, roomicon, rom1icon, rom1, squareicon, square, img_url1, name, profetion, icon1, icon2, icon3 } = data;
-
+const isActive = active === id;
   const RoomIcon = iconMap[roomicon];
   const BathIcon = iconMap[rom1icon];
   const SquareIcon = iconMap[squareicon];
@@ -32,11 +33,17 @@ const PropertyRentCard = ({ data }) => {
   const Icon2 = iconMap[icon2];
   const Icon3 = iconMap[icon3];
   return (
-    <div className='relative flex flex-col h-162 w-105 bg-white shadow-gray-300 shadow-lg space-y-4 overflow-hidden'>
-      <div className='relative h-68 w-105 '>
-        <div className='absolute h-full w-full overflow-hidden'>
-          <img src={img_url} alt="house" />
-        </div>
+    <div
+    onMouseEnter={() => setActive(id)}
+     className='relative flex flex-col h-162 w-105 bg-white shadow-gray-500 shadow-lg space-y-4 overflow-hidden'>
+      <div className='relative h-68  '>
+        <div className="absolute h-full w-full overflow-hidden">
+  <img
+    src={img_url}
+    alt="house"
+    className={`h-full w-full object-cover transform transition-transform duration-500 ${isActive ? "scale-110" : "scale-100"}`}
+  />
+</div>
         <div className='absolute top-5 right-6 flex items-center justify-center overflow-hidden bg-green-400 h-7 w-25 text-sm text-white'>
           <h1>{req}</h1>
         </div>
