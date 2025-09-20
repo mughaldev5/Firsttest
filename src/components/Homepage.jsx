@@ -1,63 +1,64 @@
 import React, { useState, useRef, useEffect } from 'react'
 
-
-const tabData = [
+ const tabData = [
   {
     id: 0,
-    title: 'The Studio',
-    desc: 'Enimad minim veniam quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet cons aetetur adipisicing elit sedo eiusmod tempor.Incididunt labore et dolore magna aliqua. sed ayd minim veniam.',
-    TotalArea: '2800 sq ft',
-    Bedroom: '150 Sq. Ft',
-    Bathroom: '45 Sq. Ft',
-    Balcony: 'Allowed',
-    Lounge: '650 Sq. Ft',
+    title: "The Studio",
+    desc: "Enimad minim veniam quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet cons aetetur adipisicing elit sedo eiusmod tempor.Incididunt labore et dolore magna aliqua. sed ayd minim veniam.",
+    TotalArea: "2800 sq ft",
+    Bedroom: "150 Sq. Ft",
+    Bathroom: "45 Sq. Ft",
+    Balcony: "Allowed",
+    Lounge: "650 Sq. Ft"
   },
   {
     id: 1,
-    title: 'Deluxe Portion',
-    desc: 'Enimad minim veniam quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet cons aetetur adipisicing elit sedo eiusmod tempor.Incididunt labore et dolore magna aliqua. sed ayd minim veniam.',
-    TotalArea: '2800 sq ft',
-    Bedroom: '150 Sq. Ft',
-    Bathroom: '45 Sq. Ft',
-    Balcony: 'Allowed',
-    Lounge: '650 Sq. Ft',
+    title: "Deluxe Portion",
+    desc: "Enimad minim veniam quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet cons aetetur adipisicing elit sedo eiusmod tempor.Incididunt labore et dolore magna aliqua. sed ayd minim veniam.",
+    TotalArea: "2800 sq ft",
+    Bedroom: "150 Sq. Ft",
+    Bathroom: "45 Sq. Ft",
+    Balcony: "Allowed",
+     Lounge: "650 Sq. Ft"
   },
   {
     id: 2,
-    title: 'Penthouse',
-    desc: 'Enimad minim veniam quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet cons aetetur adipisicing elit sedo eiusmod tempor.Incididunt labore et dolore magna aliqua. sed ayd minim veniam.',
-    TotalArea: '2800 sq ft',
-    Bedroom: '150 Sq. Ft',
-    Bathroom: '45 Sq. Ft',
-    Balcony: 'Allowed',
-    Lounge: '650 Sq. Ft',
+    title: "Penthouse",
+    desc: "Enimad minim veniam quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet cons aetetur adipisicing elit sedo eiusmod tempor.Incididunt labore et dolore magna aliqua. sed ayd minim veniam.",
+    TotalArea: "2800 sq ft",
+    Bedroom: "150 Sq. Ft",
+    Bathroom: "45 Sq. Ft",
+    Balcony: "Allowed",
+    Lounge: "650 Sq. Ft"
   },
   {
     id: 3,
-    title: 'Top Garden',
-    desc: 'Enimad minim veniam quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet cons aetetur adipisicing elit sedo eiusmod tempor.Incididunt labore et dolore magna aliqua. sed ayd minim veniam.',
-    TotalArea: '2800 sq ft',
-    Bedroom: '150 Sq. Ft',
-    Bathroom: '45 Sq. Ft',
-    Balcony: 'Allowed',
-    Lounge: '650 Sq. Ft',
+    title: "Top Garden",
+    desc: "Enimad minim veniam quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet cons aetetur adipisicing elit sedo eiusmod tempor.Incididunt labore et dolore magna aliqua. sed ayd minim veniam.",
+    TotalArea: "2800 sq ft",
+    Bedroom: "150 Sq. Ft",
+    Bathroom: "45 Sq. Ft",
+    Balcony: "Allowed",
+    Lounge: "650 Sq. Ft"
   },
   {
     id: 4,
-    title: 'Double Height',
-    desc: 'Enimad minim veniam quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet cons aetetur adipisicing elit sedo eiusmod tempor.Incididunt labore et dolore magna aliqua. sed ayd minim veniam.',
-    TotalArea: '2800 sq ft',
-    Bedroom: '150 Sq. Ft',
-    Bathroom: '45 Sq. Ft',
-    Balcony: 'Allowed',
-    Lounge: '650 Sq. Ft',
+    title: "Double Height",
+    desc: "Enimad minim veniam quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet cons aetetur adipisicing elit sedo eiusmod tempor.Incididunt labore et dolore magna aliqua. sed ayd minim veniam.",
+    TotalArea: "2800 sq ft",
+    Bedroom: "150 Sq. Ft",
+    Bathroom: "45 Sq. Ft",
+    Balcony: "Allowed",
+    Lounge: "650 Sq. Ft"
   }
+  
 ]
+
 
 
 const Card = ({ TotalArea, Bedroom, Bathroom, Balcony, Lounge }) => {
   return (
-    <div className='flex flex-col mt-5 gap-3'>
+    <div className='flex flex-col mt-14 gap-3'>
       <div className='flex items-center gap-1'>
         <span>Total Area</span>
         <span>--------------------------------------------</span>
@@ -140,10 +141,10 @@ const Homepage = () => {
           ))
         }
       </div>
-      <div className='flex justify-between w-full px-14 mt-10'>
-        <div className='bg-[#ff5a3c] h-full py-16 px-16 flex flex-col text-white w-1/2 rounded-sm'>
+      <div className='flex justify-center w-full gap-7  px-28 mt-10'>
+        <div className='bg-[#ff5a3c] h-130 py-16 px-16 flex flex-col text-white w-5/12 rounded-sm'>
           <h2 className='text-2xl font-bold'>{tabData[activeTab].title}</h2>
-          <p className='mt-4 text-lg'>{tabData[activeTab].desc}</p>
+          <p className='mt-6 text-base'>{tabData[activeTab].desc}</p>
           <Card
             TotalArea={tabData[activeTab].TotalArea}
             Bedroom={tabData[activeTab].Bedroom}
@@ -152,8 +153,8 @@ const Homepage = () => {
             Lounge={tabData[activeTab].Lounge}
           />
         </div>
-        <div className='flex items-center justify-center w-1/2'>
-          <img src="/image/10.png" alt="apartment sketch" className='h-96 w-full' />
+        <div className=' w-5/12 '>
+          <img src="/image/10.png" alt="apartment sketch" className='h-130 w-full' />
         </div>
       </div>
 

@@ -53,8 +53,8 @@ const isActive = active === id;
           <h1>{location}</h1>
         </div>
         <div className=' flex items-center justify-center  space-x-2 mr-3 text-white overflow-hidden '>
-          <h1 className='flex items-center bg-gradient-to-t from-white/70 to-transparent px-2 py-1.5 text-sm hover:text-orange-600'> {CameraIcon && <CameraIcon/>}4</h1>
-          <h1 className='flex items-center bg-gradient-to-t from-white/60 to-transparent px-2 py-1.5 text-sm hover:text-orange-600'> {VideoIcon && <VideoIcon/>}2</h1>
+          <h1 className='flex items-center bg-gradient-to-t from-white/70 to-transparent px-2 py-1.5 text-sm hover:text-orange-600 gap-1'> {CameraIcon && <CameraIcon/>}<span>4</span></h1>
+          <h1 className='flex items-center bg-gradient-to-t from-white/60 to-transparent px-2 py-1.5 text-sm hover:text-orange-600 gap-1'> {VideoIcon && <VideoIcon/>}<span>2</span></h1>
         </div>
         </div>
       </div>
@@ -72,21 +72,21 @@ const isActive = active === id;
         <div className='flex space-x-4 mt-6 ml-5'>
           <div className='flex items-center justify-center text-gray-400 '>
             <div className='flex flex-col justify-center'>
-              <h1 className='flex items-center font-bold'>3{RoomIcon && <RoomIcon/>}</h1>
+              <h1 className='flex items-center font-bold gap-1.5'><span>3</span>{RoomIcon && <RoomIcon/>}</h1>
               <p className=''>{rom}</p>
             </div>
           </div>
           <div className='flex items-center justify-center text-gray-400 space-x-4 '>
             <div className='underline h-15 w-0.5 bg-gray-400'></div>
             <div>
-              <h1 className='flex items-center font-bold'> 2 {BathIcon && <BathIcon />}</h1>
+              <h1 className='flex items-center font-bold gap-1.5'> <span>2</span> {BathIcon && <BathIcon />}</h1>
               <p className=''>{rom1}</p>
             </div>
           </div>
           <div className='flex items-center justify-center text-gray-400 space-x-4'>
             <div className='underline h-15 w-0.5 bg-gray-400'></div>
             <div>
-              <h1 className='flex items-center font-bold'>3450{SquareIcon && <SquareIcon/>}</h1>
+              <h1 className='flex items-center font-bold gap-1.5'><span>3450</span>{SquareIcon && <SquareIcon/>}</h1>
               <p className=''>{square}</p>
             </div>
           </div>

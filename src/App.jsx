@@ -1,27 +1,25 @@
 import react from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import AddList from './pages/AddList'
-import Nest from './pages/Nest'
-import Home from './pages/Home'
-import About from './pages/About'
-import Property from './pages/Property'
-import Pages from './pages/Pages'
-import News from './pages/News'
-import Contact from './pages/Contact'
-import HomeStyle01 from './pages/HomeStyle01'
-import HomeStyle02 from './pages/HomeStyle02'
-import HomeStyle03 from './pages/HomeStyle03'
-import HomeStyle04 from './pages/HomeStyle04'
-import HomeStyle05 from './pages/HomeStyle05'
-import HomeStyle06 from './pages/HomeStyle06'
-import HomeStyle07 from './pages/HomeStyle07'
-import HomeStyle08 from './pages/HomeStyle08'
-import HomeStyle09 from './pages/HomeStyle09'
-import DoubleHeight from './pages/DoubleHeight'
-import TopGarden from './pages/TopGarden'
-import Penthouse from './pages/Penthouse'
-import DeluxePortion from './pages/DeluxePortion'
-import TheStudio from './pages/TheStudio'
+import AddList from './components/AddList';
+import Nest from './components/Nest';
+import Home from './pages/Home';
+import About from './pages/About';
+import Property from './pages/Property';
+import Pages from './pages/Pages';
+import News from './pages/News';
+import Contact from './pages/Contact';
+import HomeStyle01 from './components/HomeStyle01';
+import HomeStyle02 from './components/HomeStyle02';
+import HomeStyle03 from './components/HomeStyle03';
+import HomeStyle04 from './components/HomeStyle04';
+import HomeStyle05 from './components/HomeStyle05';
+import HomeStyle06 from './components/HomeStyle06';
+import HomeStyle07 from './components/HomeStyle07';
+import HomeStyle08 from './components/HomeStyle08';
+import HomeStyle09 from './components/HomeStyle09';
+import PropertyDetails from './components/PropertyDetails';
+import NewDetail from './components/NewDetail';
+
 function App() {
 
   return (
@@ -44,11 +42,9 @@ function App() {
         <Route path='/homestyle07' element={<HomeStyle07 />} />
         <Route path='/homestyle08' element={<HomeStyle08 />} />
         <Route path='/homestyle09' element={<HomeStyle09 />} />
-        <Route path='/thestudio' element={<TheStudio />} />
-        <Route path='/deluxeportion' element={<DeluxePortion />} />
-        <Route path='/penthouse' element={<Penthouse />} />
-        <Route path='/topgarden' element={<TopGarden />} />
-        <Route path='/doubleheight' element={<DoubleHeight />} />
+        <Route path='/propertydetails' element={<PropertyDetails />} />
+        <Route path='/newdetail' element={<NewDetail />} />
+        
       </Routes>
     </BrowserRouter>
 

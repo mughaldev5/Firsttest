@@ -1,14 +1,17 @@
-import React, { useState } from 'react'
-import Layout from '../wrapper'
-import HomeData from '../api/HomeData.json'
-import HomeCard from '../components/HomeCard'
-import MenuDropdown from '../components/MenuDropdown'
-import AboutDetail from '../components/AboutDetail'
-import ProjectStatus from '../components/ProjectStatus'
-import HomeDetails from '../components/Homedetails'
-import ServiceCard from '../components/ServiceCard'
-import PropertyRentMap from '../components/PropertyRentMap'
-import Homepage from '../components/Homepage'
+import React, { useState } from 'react';
+import Layout from '../wrapper';
+import HomeData from '../api/HomeData.json';
+import HomeCard from '../components/HomeCard';
+import MenuDropdown from '../components/MenuDropdown';
+import AboutDetail from '../components/AboutDetail';
+import ProjectStatus from '../components/ProjectStatus';
+import HomeDetails from '../components/Homedetails';
+import ServiceCard from '../components/ServiceCard';
+import PropertyRentMap from '../components/PropertyRentMap';
+import Homepage from '../components/Homepage';
+import FacilityCardsMap from '../components/FacilityCardsMap';
+import AgentReviewMap from '../components/AgentReviewMap';
+import PropertyDemandMap from '../components/PropertyDemandMap';
 const Home = () => {
     const [active, setActive] = useState(null);
 
@@ -57,7 +60,18 @@ const Home = () => {
                     </div>
                 </div>
                 <PropertyRentMap active={active} setActive={setActive}/>
-                <Homepage/>
+                <div>
+                    <Homepage/>
+                </div>
+                <div>
+                <FacilityCardsMap/>
+                </div>
+                <div>
+                    <AgentReviewMap/>
+                </div>
+                <div>
+                    <PropertyDemandMap  active={active} setActive={setActive}/>
+                </div>
             </Layout>
         </div>
     );

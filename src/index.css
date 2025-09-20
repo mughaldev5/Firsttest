@@ -1,1 +1,37 @@
 @import "tailwindcss";
+
+
+ 
+/* Slick list ke andar shadow cut hone ka fix */
+.slick-slider .slick-list {
+  overflow: visible !important;
+}
+
+/* Scrollbar avoid karne ke liye */
+.slick-slider .slick-list {
+  overflow-x: hidden !important;
+  overflow-y: visible !important;
+}
+
+
+/* extra spacing remove karne ke liye */
+.slick-slide {
+  margin: 0 0;
+  padding: 0 0;   /* dono taraf ka margin 0 */
+}
+
+.slick-list {
+  margin: 0 -0;
+  padding: 0 -0;  /* list ka overflow control */
+}
+/* slick dots size + color */
+.slick-dots li button:before {
+  font-size: 14px !important;  /* size bada */
+  color: rgb(203, 140, 23) !important;    /* color orange */
+}
+
+/* active dot alag color */
+.slick-dots li.slick-active button:before {
+  color: #c45a0f !important; /* Tailwind ka orange-500 */
+}
+
