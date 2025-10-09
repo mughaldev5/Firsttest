@@ -1,131 +1,177 @@
-import React from 'react'
-import PropertyDemandCard from './PropertyDemandCard';
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import React, { useState, useRef, useEffect } from "react";
+import PropertyDemandCard from "./PropertyDemandCard";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const homedemand = [
-    {
-     id:"0",
-     img_url:"/image/1.jpg",
-     admin:"Admin",
-     usericon:"FaRegUser",
-     fillicon:"BsFillTagFill",
-     fillheading:"Room",
-     paratitle:"10 Brilliant Ways To Decorate Youre Home",
-     calendericon:"FaCalendarAlt",
-     date:"june 24, 2024", 
-     read:"READ MORE" 
-    },
-    {
-     id: "1",
-     img_url:"/image/2.jpg",
-     admin:"Admin",
-     usericon:"FaRegUser",
-     fillicon:"BsFillTagFill",
-     fillheading:"Interior",
-     paratitle:"The Most Inspiring Interior Design Of 2024",
-     calendericon:"FaCalendarAlt",
-     date:"june 21, 2024", 
-     read:"READ MORE" 
-    },
-    {
-     id:"2",
-     img_url:"/image/3.jpg",
-     admin:"Admin",
-     usericon:"FaRegUser",
-     fillicon:"BsFillTagFill",
-     fillheading:"Estate",
-     paratitle:"Recent Commercial Real Estate Transactions",
-     calendericon:"FaCalendarAlt",
-     date:"june 22, 2024", 
-     read:"READ MORE"  
-    },
-    {
-     id:"3",
-     img_url:"/image/4.jpg",
-     admin:"Admin",
-     usericon:"FaRegUser",
-     fillicon:"BsFillTagFill",
-     fillheading:"Room",
-     paratitle:"Renovating a Living Room? Experts Share Their Secrete",
-     calendericon:"FaCalendarAlt",
-     date:"june 24, 2024", 
-     read:"READ MORE" 
-    },
-    {
-     id:"4",
-     img_url:"/image/5.jpg",
-     admin:"Admin",
-     usericon:"FaRegUser",
-     fillicon:"BsFillTagFill",
-     fillheading:"Trends",
-     paratitle:"7 home trends that will shape youre house in 2024",
-     calendericon:"FaCalendarAlt",
-     date:"june 24, 2024", 
-     read:"READ MORE"
-    }
-]
+  {
+    id: "0",
+    img_url: "/image/1.jpg",
+    admin: "Admin",
+    usericon: "FaRegUser",
+    fillicon: "BsFillTagFill",
+    fillheading: "Room",
+    paratitle: "10 Brilliant Ways To Decorate Your Home",
+    calendericon: "FaCalendarAlt",
+    date: "June 24, 2024",
+    read: "READ MORE",
+  },
+  {
+    id: "1",
+    img_url: "/image/2.jpg",
+    admin: "Admin",
+    usericon: "FaRegUser",
+    fillicon: "BsFillTagFill",
+    fillheading: "Interior",
+    paratitle: "The Most Inspiring Interior Design Of 2024",
+    calendericon: "FaCalendarAlt",
+    date: "June 21, 2024",
+    read: "READ MORE",
+  },
+  {
+    id: "2",
+    img_url: "/image/3.jpg",
+    admin: "Admin",
+    usericon: "FaRegUser",
+    fillicon: "BsFillTagFill",
+    fillheading: "Estate",
+    paratitle: "Recent Commercial Real Estate Transactions",
+    calendericon: "FaCalendarAlt",
+    date: "June 22, 2024",
+    read: "READ MORE",
+  },
+  {
+    id: "3",
+    img_url: "/image/4.jpg",
+    admin: "Admin",
+    usericon: "FaRegUser",
+    fillicon: "BsFillTagFill",
+    fillheading: "Room",
+    paratitle: "Renovating a Living Room? Experts Share Their Secret",
+    calendericon: "FaCalendarAlt",
+    date: "June 24, 2024",
+    read: "READ MORE",
+  },
+  {
+    id: "4",
+    img_url: "/image/5.jpg",
+    admin: "Admin",
+    usericon: "FaRegUser",
+    fillicon: "BsFillTagFill",
+    fillheading: "Trends",
+    paratitle: "7 Home Trends That Will Shape Your House in 2024",
+    calendericon: "FaCalendarAlt",
+    date: "June 24, 2024",
+    read: "READ MORE",
+  },
+];
 
-function NextArrow(props) {
-  const { className, onClick } = props;
-  return (
-    <div
-      className={`${className} opacity-0 group-hover:opacity-100 transition-opacity duration-300 !flex !items-center !justify-center !bg-orange-600 !rounded-full !w-10 !h-10 !z-20 !right-2`}
-      onClick={onClick}
-    >
-      
-    </div>
-  );
-}
+const PropertyDemandMap = ({ active, setActive }) => {
+  const total = homedemand.length;
+  const [index, setIndex] = useState(total); // start from cloned middle set
+  const visibleCards = 3;
+  const gap = 20;
+  const cardWidth = 380;
+  const sliderRef = useRef(null);
+  const transitionTime = 500;
 
-function PrevArrow(props) {
-  const { className, onClick } = props;
-  return (
-    <div
-      className={`${className} opacity-0 group-hover:opacity-100 transition-opacity duration-300 !flex !items-center !justify-center !bg-orange-600 !rounded-full !w-10 !h-10 !z-20 !left-2`}
-      onClick={onClick}
-    >
-      
-    </div>
-  );
-}
-const PropertyDemandMap = ({ active, setActive}) => {
+  // Duplicate array twice for infinite illusion
+  const cards = [...homedemand, ...homedemand, ...homedemand];
 
-   var settings = {
-
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3, // ek row me 3 cards
-    slidesToScroll: 1,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
-   
+  const handleNext = () => {
+    setIndex((prev) => prev + 1);
   };
+
+  const handlePrev = () => {
+    setIndex((prev) => prev - 1);
+  };
+
+  // 🔁 Infinite Loop Logic (No Reverse Jump)
+  useEffect(() => {
+    const slider = sliderRef.current;
+    if (!slider) return;
+
+    slider.style.transition = `transform ${transitionTime}ms ease-in-out`;
+
+    // Right end reached
+    if (index >= total * 2) {
+      setTimeout(() => {
+        slider.style.transition = "none";
+        setIndex(total);
+      }, transitionTime);
+    }
+
+    // Left end reached
+    if (index <= total - 1) {
+      setTimeout(() => {
+        slider.style.transition = "none";
+        setIndex(total + (total - 1));
+      }, transitionTime);
+    }
+  }, [index, total]);
+  const visibleWidth = visibleCards * cardWidth + (visibleCards - 1) * gap
+
   return (
-    <div className='relative w-full bg-white overflow-hidden'>
-    <div className="text-center mt-20">
+    <div className=" relative h-dvh w-full bg-white mt-40 overflow-hidden ">
+      {/* Heading */}
+      <div className="text-center mt-20">
         <div className="mx-auto bg-orange-100 h-8 w-32 rounded-2xl flex items-center justify-center">
-          <h1 className="text-orange-600">
-            News & Blogs
-          </h1>
+          <h1 className="text-orange-600">News & Blogs</h1>
         </div>
         <h1 className="mt-8 text-5xl font-bold text-gray-800">
-         Leatest News Feeds
+          Latest News Feeds
         </h1>
       </div>
-      <Slider {...settings}>
-      
-      {
-        homedemand.map((curElem) =>(
-      <div className='relative flex items-center justify-center mt-15' key={curElem.id}>
-        <PropertyDemandCard  data={curElem}  active={active} setActive={setActive}/>
-      </div> 
-        ))}
-        
-        </Slider>
-    </div>
-  )
-}
 
-export default PropertyDemandMap
+      {/* Slider */}
+      <div className="relative mt-10 flex items-center justify-center group">
+        {/* Prev Button */}
+        <button
+          onClick={handlePrev}
+          className="absolute left-28 top-1/2 -translate-y-1/2 
+               bg-orange-600 text-white w-10 h-10 rounded-full flex items-center justify-center
+               opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        >
+          <FaChevronLeft />
+        </button>
+
+        {/* Cards Container */}
+        <div className=" relative w-[1200px] overflow-hidden"  style={{ width: `${visibleWidth}px` }}>
+        <div className="absolute inset-0 pointer-events-none z-0 bg-transparent"></div>
+          <div
+            ref={sliderRef}
+            className="flex gap-4 transition-transform duration-500 ease-in-out"
+            style={{
+              gap: `${gap}px`,
+              transform: `translateX(-${
+                index * (cardWidth + gap) - (visibleWidth - cardWidth) / 2
+              }px)`,
+              width: `${cards.length * (cardWidth + gap)}px`,
+            }}
+          >
+            {cards.map((card ) => (
+              <div  key={card.id} style={{ minWidth: `${cardWidth - 0}px` }}>
+                <PropertyDemandCard
+                  data={card}
+                  active={active}
+                  setActive={setActive}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Next Button */}
+        <button
+          onClick={handleNext}
+          className="absolute right-28 top-1/2 -translate-y-1/2 
+               bg-orange-600 text-white w-10 h-10 rounded-full flex items-center justify-center
+               opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        >
+          <FaChevronRight />
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default PropertyDemandMap;

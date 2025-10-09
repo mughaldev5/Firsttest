@@ -19,13 +19,16 @@ const PropertyDemandCard = ({data, active, setActive}) => {
   return (
     <div
     onMouseEnter={() => setActive(id)}
-     className='relative flex flex-col bg-white shadow-lg h-117 w-88'>
-      <NavLink to="/NewDetail"> 
+     className="relative flex flex-col h-117 w-95 bg-white shadow-lg hover:shadow-2xl transition-all duration-300 transform  z-10"
+  style={{ marginBottom: "20px" }}>
+      <div className='relative w-full h-60'>
+        <NavLink className='absolute w-full h-full overflow-hidden' to="/NewDetail"> 
 
-        <img className={`w-full h-60 object-cover transform transition-transform duration-300 ${ isActive ? "scale-105" : "scale-100"} `} src={img_url} alt="house" />
+        <img className={` w-full h-full object-cover transform transition-transform duration-300 ${ isActive ? "scale-103" : "scale-100"} `} src={img_url} alt="house" />
       </NavLink>
+      </div>
       <div className='flex flex-col mt-8 ml-6 gap-3'>
-      <NavLink className='flex items-center gap-13' to="/">
+      <NavLink className='flex items-center space-x-13' to="/">
         <div className='flex items-center gap-1.5'>
           <p className='flex text-orange-600'>
             {UserIcon && <UserIcon/>}
@@ -52,8 +55,8 @@ const PropertyDemandCard = ({data, active, setActive}) => {
           </p>
           <p>{date}</p>
           </div>
-          <NavLink className='flex text-orange-600' to="/newdetail">
-          <h1>{read}</h1>
+          <NavLink className='flex text-orange-600 absolute right-9 ' to="/newdetail">
+          <h1 className=''>{read}</h1>
           </NavLink>
         </div>
         </div>

@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
-
+body{
+  margin: 0;
+  padding: 0;
+}
  
 /* Slick list ke andar shadow cut hone ka fix */
 .slick-slider .slick-list {
@@ -15,15 +18,23 @@
 
 
 /* extra spacing remove karne ke liye */
-.slick-slide {
-  margin: 0 0;
-  padding: 0 0;   /* dono taraf ka margin 0 */
+/* force slick carousel to remove default gaps and align center */
+.slick-list {
+  margin: 0 auto !important;   /* center align karega */
+  padding: 0 !important;
 }
 
-.slick-list {
-  margin: 0 -0;
-  padding: 0 -0;  /* list ka overflow control */
+.slick-track {
+  display: flex !important;    /* track ko flex bana do */
+  align-items: center !important;
 }
+
+.slick-slide {
+  height: auto !important;     /* card height maintain */
+  margin: 0 !important;        /* extra gap remove */
+  padding: 0 !important;
+}
+
 /* slick dots size + color */
 .slick-dots li button:before {
   font-size: 14px !important;  /* size bada */
@@ -33,5 +44,11 @@
 /* active dot alag color */
 .slick-dots li.slick-active button:before {
   color: #c45a0f !important; /* Tailwind ka orange-500 */
+}
+
+/* index.css */
+.overflow-x-hidden-y-visible {
+  overflow-x: hidden;
+  overflow-y: visible;
 }
 
