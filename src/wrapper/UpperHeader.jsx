@@ -10,7 +10,7 @@ import { NavLink } from "react-router-dom";
 const UpperHeader = () => {
     return (
 
-        <header className='flex items-center justify-around h-10 w-full  bg-gray-800 text-white'>
+        <header className='flex items-center justify-around h-10 w-full font-sans bg-gray-900 text-white'>
             <div className='flex items-center gap-x-6'>
                 <div className='flex items-center gap-x-3'>
                     <span className='flex items-center text-orange-600 text-xl font-light'><CiMail /></span>

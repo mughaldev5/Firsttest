@@ -2,7 +2,7 @@ import React from "react";
 
 const MenuDropdown = () => {
     return (
-        <div className="absolute flex items-center justify-around w-6xl h-36 bg-white shadow-gray-100 shadow-lg space-x-6 top-[calc(100vh-60px)] left-0 right-0 mx-auto z-20 mt-39">
+        <div className="absolute  left-0 right-0 mx-auto z-20 -mt-18 flex items-center justify-around w-6xl h-36 bg-white shadow-gray-100 shadow-lg space-x-6 ">
             <div className=" flex space-x-16  ">
                 <select className="flex items-center border-2 border-gray-800 h-16 w-58">
                     <option className="bg-white space-y-3 hover:bg-gray-50" value="Choose Area ">Choose Area</option>

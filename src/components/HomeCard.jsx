@@ -3,8 +3,8 @@ import { BiHomeCircle } from "react-icons/bi";
 const HomeCard = ({ data }) => {
     const { id, title, dream, para, img_url } = data;
     return (
-        <div className='relative flex bg-gray-200 pt-18 w-full h-lvh'>
-            <div className=' flex w-7xl m-auto'>
+        <div className='relative flex bg-gray-200 pb-25 '>
+            <div className=' flex w-7xl pt-70 m-auto'>
                 <div className='flex flex-col pt-13 ml-17 space-y-8 '>
                     <div className='flex items-center space-x-2 text-gray-950 font-bold'>
                         <span className='text-orange-600'><BiHomeCircle /></span>

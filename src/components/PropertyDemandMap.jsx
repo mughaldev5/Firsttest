@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import PropertyDemandCard from "./PropertyDemandCard";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import {  FaArrowLeft, FaArrowRight} from "react-icons/fa6";
 
 const homedemand = [
   {
@@ -70,7 +70,7 @@ const PropertyDemandMap = ({ active, setActive }) => {
   const [index, setIndex] = useState(total); // start from cloned middle set
   const visibleCards = 3;
   const gap = 20;
-  const cardWidth = 380;
+  const cardWidth = 372;
   const sliderRef = useRef(null);
   const transitionTime = 500;
 
@@ -127,11 +127,11 @@ const PropertyDemandMap = ({ active, setActive }) => {
         {/* Prev Button */}
         <button
           onClick={handlePrev}
-          className="absolute left-28 top-1/2 -translate-y-1/2 
-               bg-orange-600 text-white w-10 h-10 rounded-full flex items-center justify-center
+          className="absolute left-38 top-1/2 -translate-y-1/2 
+               hover:bg-orange-600 hover:text-white text-xl w-12 h-12 rounded-full flex items-center justify-center bg-transparent border-1 border-gray-400 hover:border-none
                opacity-0 group-hover:opacity-100 transition-opacity duration-300"
         >
-          <FaChevronLeft />
+          <FaArrowLeft />
         </button>
 
         {/* Cards Container */}
@@ -163,11 +163,10 @@ const PropertyDemandMap = ({ active, setActive }) => {
         {/* Next Button */}
         <button
           onClick={handleNext}
-          className="absolute right-28 top-1/2 -translate-y-1/2 
-               bg-orange-600 text-white w-10 h-10 rounded-full flex items-center justify-center
-               opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          className="absolute right-38 top-1/2 -translate-y-1/2 
+               hover:bg-orange-600 hover:text-white text-xl w-12 h-12 rounded-full flex items-center justify-center bg-transparent border-1 border-gray-400 hover:border-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"
         >
-          <FaChevronRight />
+          <FaArrowRight />
         </button>
       </div>
     </div>

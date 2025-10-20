@@ -19,12 +19,12 @@ const PropertyDemandCard = ({data, active, setActive}) => {
   return (
     <div
     onMouseEnter={() => setActive(id)}
-     className="relative flex flex-col h-117 w-95 bg-white shadow-lg hover:shadow-2xl transition-all duration-300 transform  z-10"
+     className="relative flex flex-col h-122 w-93 bg-white shadow-lg  transition-all duration-300 transform  z-10"
   style={{ marginBottom: "20px" }}>
-      <div className='relative w-full h-60'>
+      <div className='relative w-full h-65'>
         <NavLink className='absolute w-full h-full overflow-hidden' to="/NewDetail"> 
 
-        <img className={` w-full h-full object-cover transform transition-transform duration-300 ${ isActive ? "scale-103" : "scale-100"} `} src={img_url} alt="house" />
+        <img className={` w-full h-full object-cover transform transition-transform duration-500 ${ isActive ? "scale-109" : "scale-100"} `} src={img_url} alt="house" />
       </NavLink>
       </div>
       <div className='flex flex-col mt-8 ml-6 gap-3'>
@@ -39,10 +39,10 @@ const PropertyDemandCard = ({data, active, setActive}) => {
           <p className='flex text-orange-600'>
             {FillIcon && <FillIcon/>}
           </p>
-          <h1 className='flex hover:text-orange-600'>{fillheading}</h1>
+          <h1 className='flex hover:text-orange-500'>{fillheading}</h1>
         </div>
       </NavLink>
-      <NavLink className='flex text-2xl font-bold text-gray-800' to="/newdetail">
+      <NavLink className='flex w-xs text-2xl font-bold text-gray-800 hover:text-orange-600' to="/newdetail">
         <h1>
           {paratitle}
         </h1>
