@@ -30,7 +30,7 @@ const LowerHeader = () => {
         isScrolled
           ? "fixed top-0 shadow-md transition-all duration-300"
           : "absolute top-[40px] transition-all duration-300"
-      } left-0 w-full z-40 flex justify-around items-center font-mono font-medium h-30  bg-white text-gray-950`}
+      } left-0 w-full z-40 flex justify-around items-center font-sans font-medium h-26  bg-white text-gray-950`}
     >
       <div className='flex items-center text-4xl space-x-2 font-bold overflow-hidden'>
         <span className='text-4xl text-orange-600 font-bold'><BiHomeCircle /></span>

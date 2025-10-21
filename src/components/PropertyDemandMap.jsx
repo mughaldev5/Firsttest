@@ -1,69 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
+import { homedemand } from './PropertyRentMap';
 import PropertyDemandCard from "./PropertyDemandCard";
 import {  FaArrowLeft, FaArrowRight} from "react-icons/fa6";
 
-const homedemand = [
-  {
-    id: "0",
-    img_url: "/image/1.jpg",
-    admin: "Admin",
-    usericon: "FaRegUser",
-    fillicon: "BsFillTagFill",
-    fillheading: "Room",
-    paratitle: "10 Brilliant Ways To Decorate Your Home",
-    calendericon: "FaCalendarAlt",
-    date: "June 24, 2024",
-    read: "READ MORE",
-  },
-  {
-    id: "1",
-    img_url: "/image/2.jpg",
-    admin: "Admin",
-    usericon: "FaRegUser",
-    fillicon: "BsFillTagFill",
-    fillheading: "Interior",
-    paratitle: "The Most Inspiring Interior Design Of 2024",
-    calendericon: "FaCalendarAlt",
-    date: "June 21, 2024",
-    read: "READ MORE",
-  },
-  {
-    id: "2",
-    img_url: "/image/3.jpg",
-    admin: "Admin",
-    usericon: "FaRegUser",
-    fillicon: "BsFillTagFill",
-    fillheading: "Estate",
-    paratitle: "Recent Commercial Real Estate Transactions",
-    calendericon: "FaCalendarAlt",
-    date: "June 22, 2024",
-    read: "READ MORE",
-  },
-  {
-    id: "3",
-    img_url: "/image/4.jpg",
-    admin: "Admin",
-    usericon: "FaRegUser",
-    fillicon: "BsFillTagFill",
-    fillheading: "Room",
-    paratitle: "Renovating a Living Room? Experts Share Their Secret",
-    calendericon: "FaCalendarAlt",
-    date: "June 24, 2024",
-    read: "READ MORE",
-  },
-  {
-    id: "4",
-    img_url: "/image/5.jpg",
-    admin: "Admin",
-    usericon: "FaRegUser",
-    fillicon: "BsFillTagFill",
-    fillheading: "Trends",
-    paratitle: "7 Home Trends That Will Shape Your House in 2024",
-    calendericon: "FaCalendarAlt",
-    date: "June 24, 2024",
-    read: "READ MORE",
-  },
-];
+
 
 const PropertyDemandMap = ({ active, setActive }) => {
   const total = homedemand.length;
