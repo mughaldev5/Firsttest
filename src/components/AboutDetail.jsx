@@ -6,23 +6,23 @@ import { SiSecurityscorecard } from "react-icons/si";
 const AboutDetail = ({ data }) => {
   const { id, img_url, title, para, design, sence, style, security, para1 } = data
   return (
-    <div className=' flex h-lvh w-6xl m-auto pt-45 space-x-20 '>
-
-      <div className='  border-15 border-white shadow-lg'>
-        <img className='h-147 w-xl' src={img_url} alt="" />
+    <div className='relative flex 2xl:flex-row xl:flex-row lg:flex-row md:flex-col sm:flex-col flex-col justify-center md:items-center sm:items-center items-center pt-45 md:space-x-20 sm:space-x-20 space-x-5 overflow-hidden '>
+      <div className='md:border-15 sm:border-15 border-5 border-white shadow-lg'>
+        <img className='h-147 2xl:w-105  xl:w-105 lg:w-90 md:w-105 sm:w-90 w-88' src={img_url} alt="" />
       </div>
-      <div className='w-2xl '>
+      <div className='relative 2xl:w-138 xl:w-138 lg:w-105 md:w-138 sm:w-90 w-88 '>
         <div className='flex justify-center items-center bg-orange-100 h-8 w-32  rounded-2xl'>
           <h1 className='text-orange-600 items-center'>About Us</h1>
         </div>
-        <div className='mt-3'>
-          <h1 className='text-5xl font-bold text-gray-800'>{title}</h1>
+        <div className='mt-3 w-full'>
+          <h1 className='2xl:text-5xl xl:text-5xl lg:text-3xl md:text-5xl sm:text-3xl text-2xl font-bold text-gray-800'>{title}</h1>
         </div>
-        <div className='w-116 text-gray-500 mt-6'>
+        <div className='2xl:w-116 xl:w-120 lg:w-full md-full sm:w-full w-full text-gray-500 mt-6'>
           <p>{para}</p>
         </div>
-        <div className='flex flex-wrap text-gray-800 font-bold mt-8 space-x-15 space-y-5'>
-          <div className='flex items-center space-x-3'>
+        <div className='relative flex flex-col w-full text-gray-800 font-bold mt-8 space-y-6 overflow-hidden'>
+          <div className='flex  items-center 2xl:space-x-15 xl:space-x-15 lg:space-x-10'>
+            <div className='flex items-center space-x-3'>
             <h2 className='flex items-center justify-center text-2xl font-bold h-10 w-10 text-orange-600 bg-orange-100 rounded-full'><BiHomeCircle /></h2>
             <h1>{design}</h1>
           </div>
@@ -30,7 +30,9 @@ const AboutDetail = ({ data }) => {
             <h2 className='flex items-center justify-center font-bold h-10 w-10 text-orange-600 bg-orange-100 rounded-full'><GiConcentricCrescents /></h2>
             <h1>{sence}</h1>
           </div>
-          <div className='flex items-center space-x-3 pt-4'>
+          </div>
+          <div className='flex items-center 2xl:space-x-15 xl:space-x-15 lg:space-x-10'>
+            <div className='flex items-center space-x-3'>
             <h2 className='flex items-center justify-center text-2xl font-bold h-10 w-10 text-orange-600 bg-orange-100 rounded-full'><IoIosFitness /></h2>
             <h1>{style}</h1>
           </div>
@@ -38,10 +40,11 @@ const AboutDetail = ({ data }) => {
             <h2 className='flex items-center justify-center font-bold h-10 w-10 text-orange-600 bg-orange-100 rounded-full'><SiSecurityscorecard /></h2>
             <h1>{security}</h1>
           </div>
+          </div>
         </div>
-        <div className='flex items-center bg-orange-50 space-x-5 mt-6'>
+        <div className='flex items-center w-full  bg-orange-50 space-x-5 mt-6'>
           <div className='underline h-27 w-1.5 bg-orange-600'></div>
-          <p className='w-2/3'>{para1}</p>
+          <p className='w-85'>{para1}</p>
         </div>
         <div className="z-10 mt-5">
           <button className="relative overflow-hidden h-16 w-52 flex items-center justify-center uppercase  group bg-transparent hover:border hover:border-gray-500 ">

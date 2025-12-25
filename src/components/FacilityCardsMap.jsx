@@ -66,7 +66,7 @@ const FacilityCardsMap = () => {
           Building Aminities 
         </h1>
       </div>
-    <div className='flex flex-wrap justify-center w-7xl m-auto gap-x-4 gap-y-7'>
+    <div className='flex flex-wrap justify-center 2xl:w-7xl xl:w-7xl lg:w-5xl md:w-3xl m-auto gap-x-4 gap-y-7'>
       {
         homefacility.map((item) => (
         <div key={item.id} className='flex '>

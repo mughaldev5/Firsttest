@@ -9,7 +9,7 @@ const ServiceCard = ({ data, active, setActive }) => {
 
         <div
             onMouseEnter={() => setActive(id)}
-            className=" relative flex flex-col items-center justify-center w-90 h-110 bg-white  shadow-lg p-4  overflow-hidden">
+            className=" relative flex 2xl:flex-col xl:flex-col lg:flex-col md:flex-col sm:flex-col flex-col items-center justify-center 2xl:w-90 xl:w-90 lg:w-70 md:w-80 sm:w-90 w-90  h-110 bg-white shadow-lg p-4 overflow-hidden">
             <div className="flex justify-center text-3xl pt-9">
                 <img src={img_url} alt="logo" />
             </div>

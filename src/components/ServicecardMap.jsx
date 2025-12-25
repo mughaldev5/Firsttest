@@ -26,8 +26,8 @@ import ServiceCard from './ServiceCard'
 const ServicecardMap = ({ active, setActive }) => {
   return (
     <div>
-      <div className='relative flex  justify-center h-lvh w-full bg-gray-100 overflow-hidden'>
-                    <div className='absolute flex flex-col items-center justify-center mt-24  overflow-hidden'>
+      <div className='relative flex justify-center h-auto w-full bg-gray-100 pb-15 overflow-hidden'>
+                    <div className='absolute flex flex-col items-center justify-center pt-24  overflow-hidden'>
                         <div className='flex justify-center items-center bg-orange-100 h-8 w-32 overflow-hidden rounded-2xl'>
                             <h1 className='text-orange-600 items-center'>Our Servicr</h1>
                         </div>
@@ -37,7 +37,7 @@ const ServicecardMap = ({ active, setActive }) => {
                             </h1>
                         </div>
                     </div>
-                    <div className='flex  mt-68 space-x-9 overflow-hidden'>
+                    <div className='relative flex 2xl:flex-row xl:flex-row lg:flex-row md:flex-wrap sm:flex-col flex-col  justify-center md:gap-y-8 sm:gap-y-8 gap-y-8 pt-68 space-x-9 overflow-hidden'>
                         {
                             service.map((curElem) => (
                                 <ServiceCard key={curElem.id} data={curElem} active={active} setActive={setActive} />

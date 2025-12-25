@@ -13,12 +13,13 @@ const about= [
       para1: "Enimad minim veniam quis nostrud exercitation llamco laboris. Lorem ipsum dolor sit amet"
     }
   ]
-const AboutdetailMap = () => {
+const AboutdetailMap = ({ active, setActive }) => {
   return (
-    <div className='h-lvh w-full'>
+    <div className='relative w-full'>
+    
       {
         about.map((curElem) =>(
-            <AboutDetail key={curElem.id} data={curElem}/>
+            <AboutDetail key={curElem.id} data={curElem}  active={active} setActive={setActive}/>
         ))
       }
     </div>

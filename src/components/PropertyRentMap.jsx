@@ -197,16 +197,29 @@ function PrevArrow(props) {
 
 const PropertyRentMap = ({ active, setActive}) => {
   var settings = {
-
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3, // ek row me 3 cards
-    slidesToScroll: 1,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
-   
-  };
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  adaptiveHeight: true,
+  nextArrow: <NextArrow />,
+  prevArrow: <PrevArrow />,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1
+      }
+    }
+  ]
+};
 
   return (
     <div className="w-full bg-white py-16 group relative">

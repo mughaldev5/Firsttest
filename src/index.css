@@ -6,14 +6,20 @@ body{
 }
  
 /* Slick list ke andar shadow cut hone ka fix */
-.slick-slider .slick-list {
-  overflow: visible !important;
+.testimonial-slider .slick-track {
+  display: flex !important;
 }
 
+
 /* Scrollbar avoid karne ke liye */
-.slick-slider .slick-list {
-  overflow-x: hidden !important;
-  overflow-y: visible !important;
+
+.testimonial-slider .slick-slide {
+  padding: 0 12px; /* yahin se gap */
+  box-sizing: border-box;
+}
+
+.testimonial-slider .slick-list {
+  margin: 0 -12px;
 }
 
 
@@ -47,8 +53,12 @@ body{
 }
 
 /* index.css */
-.overflow-x-hidden-y-visible {
-  overflow-x: hidden;
-  overflow-y: visible;
+
+
+.testimonial-slider .slick-slide {
+  padding: 0 8px; /* gap control */
 }
 
+.testimonial-slider .slick-list {
+  margin: 0 -8px; /* alignment fix */
+}

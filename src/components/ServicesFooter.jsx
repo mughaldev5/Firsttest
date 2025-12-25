@@ -12,6 +12,6 @@ const ServicesFooter = () => {
       <NavLink className="relative pl-0 transition-all duration-300 ease-in-out hover:translate-x-10 hover:text-orange-500 before:content-['//'] before:absolute before:left-[-40px] before:opacity-0 hover:before:opacity-100 hover:before:text-orange-500 " to="/promotionaloffers">Promotional Offers</NavLink>
     </div>
   )
-}
+} ;
 
-export default ServicesFooter
+export default ServicesFooter ;

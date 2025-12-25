@@ -2,56 +2,74 @@ import React, { useState, useRef, useEffect } from "react";
 import { homedemand } from './PropertyRentMap';
 import PropertyDemandCard from "./PropertyDemandCard";
 import {  FaArrowLeft, FaArrowRight} from "react-icons/fa6";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
+function NextArrow(props) {
+  const { className, onClick } = props;
+  return (
+    <div
+      className={`${className} opacity-0 group-hover:opacity-100 transition-opacity duration-300 !flex !items-center !justify-center !bg-orange-600 !rounded-full !w-10 !h-10 !z-20 !right-2`}
+      onClick={onClick}
+    >
+     <FaArrowRight/> 
+    </div>
+  );
+}
 
-
+function PrevArrow(props) {
+  const { className, onClick } = props;
+  return (
+    <div
+      className={`${className} opacity-0 group-hover:opacity-100 transition-opacity duration-300 !flex !items-center !justify-center !bg-orange-600 !rounded-full !w-10 !h-10 !z-20 !left-2`}
+      onClick={onClick}
+    >
+      <FaArrowLeft/>
+    </div>
+  );
+}
 const PropertyDemandMap = ({ active, setActive }) => {
-  const total = homedemand.length;
-  const [index, setIndex] = useState(total); // start from cloned middle set
-  const visibleCards = 3;
-  const gap = 20;
-  const cardWidth = 372;
-  const sliderRef = useRef(null);
-  const transitionTime = 500;
-
-  // Duplicate array twice for infinite illusion
-  const cards = [...homedemand, ...homedemand, ...homedemand];
-
-  const handleNext = () => {
-    setIndex((prev) => prev + 1);
-  };
-
-  const handlePrev = () => {
-    setIndex((prev) => prev - 1);
-  };
-
-  // 🔁 Infinite Loop Logic (No Reverse Jump)
-  useEffect(() => {
-    const slider = sliderRef.current;
-    if (!slider) return;
-
-    slider.style.transition = `transform ${transitionTime}ms ease-in-out`;
-
-    // Right end reached
-    if (index >= total * 2) {
-      setTimeout(() => {
-        slider.style.transition = "none";
-        setIndex(total);
-      }, transitionTime);
+  var settings = {
+  dots: false,
+  arrows: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  adaptiveHeight: true,
+  nextArrow: <NextArrow />,
+  prevArrow: <PrevArrow />,
+  responsive: [
+    {
+      breakpoint: 1280,
+      settings: {
+        slidesToShow: 3,
+        dots: true,
+        arrows:false
+      }
+    },
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        dots: true,
+        arrows:false
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        dots: true, 
+        arrows: false
+      }
     }
-
-    // Left end reached
-    if (index <= total - 1) {
-      setTimeout(() => {
-        slider.style.transition = "none";
-        setIndex(total + (total - 1));
-      }, transitionTime);
-    }
-  }, [index, total]);
-  const visibleWidth = visibleCards * cardWidth + (visibleCards - 1) * gap
+  ]
+};
 
   return (
-    <div className=" relative h-dvh w-full bg-white mt-40 overflow-hidden ">
+    <div className=" relative pb-25 w-full bg-white mt-40 overflow-hidden ">
       {/* Heading */}
       <div className="text-center mt-20">
         <div className="mx-auto bg-orange-100 h-8 w-32 rounded-2xl flex items-center justify-center">
@@ -63,53 +81,24 @@ const PropertyDemandMap = ({ active, setActive }) => {
       </div>
 
       {/* Slider */}
-      <div className="relative mt-10 flex items-center justify-center group">
-        {/* Prev Button */}
-        <button
-          onClick={handlePrev}
-          className="absolute left-38 top-1/2 -translate-y-1/2 
-               hover:bg-orange-600 hover:text-white text-xl w-12 h-12 rounded-full flex items-center justify-center bg-transparent border-1 border-gray-400 hover:border-none
-               opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-        >
-          <FaArrowLeft />
-        </button>
+      <div className="relative mt-10 w-full max-w-7xl group mx-auto">
+  <Slider {...settings}>
+    {homedemand.map((card) => (
+      <div key={card.id} className="px-3">
+        <PropertyDemandCard
+          data={card}
+          active={active}
+          setActive={setActive}
+        />
+      </div>
+    ))}
+  </Slider>
+</div>
 
-        {/* Cards Container */}
-        <div className=" relative w-[1200px] overflow-hidden"  style={{ width: `${visibleWidth}px` }}>
-        <div className="absolute inset-0 pointer-events-none z-0 bg-transparent"></div>
-          <div
-            ref={sliderRef}
-            className="flex gap-4 transition-transform duration-500 ease-in-out"
-            style={{
-              gap: `${gap}px`,
-              transform: `translateX(-${
-                index * (cardWidth + gap) - (visibleWidth - cardWidth) / 2
-              }px)`,
-              width: `${cards.length * (cardWidth + gap)}px`,
-            }}
-          >
-            {cards.map((card ) => (
-              <div  key={card.id} style={{ minWidth: `${cardWidth - 0}px` }}>
-                <PropertyDemandCard
-                  data={card}
-                  active={active}
-                  setActive={setActive}
-                />
-              </div>
-            ))}
-          </div>
         </div>
 
-        {/* Next Button */}
-        <button
-          onClick={handleNext}
-          className="absolute right-38 top-1/2 -translate-y-1/2 
-               hover:bg-orange-600 hover:text-white text-xl w-12 h-12 rounded-full flex items-center justify-center bg-transparent border-1 border-gray-400 hover:border-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-        >
-          <FaArrowRight />
-        </button>
-      </div>
-    </div>
+        
+     
   );
 };
 

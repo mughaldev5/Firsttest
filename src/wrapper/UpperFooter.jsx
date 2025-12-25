@@ -6,7 +6,7 @@ import CustomercareFooter from '../components/CustomercareFooter'
 import NewsletterFooter from '../components/NewsletterFooter'
 const UpperFooter = () => {
   return (
-    <div className='flex justify-around h-auto pt-40 pb-23 bg-gray-950'>
+    <div className='flex flex-wrap justify-around h-auto xl:gap-0 lg:gap-16 md:gap-16 sm:gap-10 gap-10 pt-40 pb-23 bg-gray-950'>
    <StateFooter/>
    <CompanyFooter/>
    <ServicesFooter/>

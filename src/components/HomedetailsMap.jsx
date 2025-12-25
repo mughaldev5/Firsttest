@@ -24,7 +24,7 @@ import HomeDetails from './Homedetails'
   ]
 const HomedetailsMap = () => {
   return (
-    <div className='h-lvh w-full'>
+    <div className='relative w-full py-10'>
       {
         homeabout.map((curElem ) =>(
           <HomeDetails key={curElem.id} data={curElem}/>

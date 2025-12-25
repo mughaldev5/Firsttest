@@ -35,7 +35,7 @@ const isActive = active === id;
   return (
     <div
     onMouseEnter={() => setActive(id)}
-     className='relative flex flex-col h-162 w-105 bg-white shadow-gray-500 shadow-lg space-y-4 overflow-hidden'>
+     className='relative flex flex-col h-162 2xl:w-105 bg-white shadow-gray-500 shadow-lg space-y-4 overflow-hidden' style={{ marginBottom: "20px" }}>
       <div className='relative h-68  '>
         <div className="absolute h-full w-full overflow-hidden">
   <img

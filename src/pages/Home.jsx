@@ -16,7 +16,7 @@ const Home = () => {
     const [active, setActive] = useState(null);
 
     return (
-        <div>
+        <div className='overflow-hidden'>
             <Layout>
 
                 <div>
@@ -31,7 +31,7 @@ const Home = () => {
                      <AboutdetailMap/>
                 </div>
 
-                <div>
+                <div >
                     <ProjectStatus />
                 </div>
 
@@ -56,7 +56,7 @@ const Home = () => {
                 </div>
 
                 <div>
-                    <AgentReviewMap/>
+                    <AgentReviewMap active={active} setActive={setActive}/>
                 </div>
 
                 <div>
